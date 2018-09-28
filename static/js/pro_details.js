@@ -1,3 +1,5 @@
 $(function(){
-    $("#details_item")
+    $("#details_item").click();
+
+    aaa
 })
