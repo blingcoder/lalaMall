@@ -1,0 +1,134 @@
+#related_search{
+    padding: 0 10px;
+}
+#related_kw{
+    padding: 10px 8px 15px;
+}
+.shadow{
+    border: 1px solid #DDD;
+    box-shadow: 0 0 3px #DDD;
+}
+#related_sort{
+    padding: 5px 10px;
+}
+#related_sort>p{
+    padding-bottom: 10px;
+}
+#related_sort>div{
+    border-top: 1px dashed #E8E8E8;
+    padding: 15px 25px;
+}
+#related_sort>div h3, #related_sort>div>a, #related_sort>div ul, #related_sort>div li{
+    float: left;
+}
+#related_sort>div h3{
+    color: #666;
+    width: 5%;
+    text-align: center;
+    margin-top: 2px;
+}
+#related_sort>div>a{
+    padding: 2px 10px;
+    color: #FF0000;
+    border: 1px solid #999;
+    margin-left: 25px;
+}
+#related_sort>div>ul a{
+    padding: 2px 10px;
+    display: inline-block;
+}
+#related_sort>div a:hover{
+    background: #F3EDC2;
+    color: #FF0000;
+}
+/*主体*/
+#search_body{
+    padding-bottom: 20px;
+}
+#search_body .pagination{
+    width: 100%;
+    margin-top: 20px;
+}
+/*主体列表左侧*/
+#left_pro{
+    width: 80%;
+    box-sizing: border-box;
+}
+/*主体列表左侧标题*/
+.title_style{
+    padding: 0;
+    margin: 8px 10px 10px;
+    border-radius: 4px;
+}
+#left_pro>div:first-child a{
+    display: block;
+    padding: 8px 20px;
+}
+#left_pro>div:first-child a.active{
+    background: #F5F5F5;
+}
+#left_pro>div:first-child li+li{
+    border-left: 1px dotted #E8E8E8;
+}
+#left_pro,#left_pro li,#right_pro,#search_body .pagination{
+    float: left;
+}
+/*主体列表左侧图片列表*/
+#left_pro>div:nth-child(2) li{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+/*公用的单个商品div样式*/
+.pro{
+    border: 1px solid #E8E8E8;
+}
+.pro:hover{
+    box-shadow: 0 11px 9px -8px #999;
+}
+.pro img{
+    width: 100%;
+}
+.pro img+p {
+    padding: 0 10px;
+}
+.pro img+p+p{
+    padding: 8px 4px;
+    font-size: 0;
+}
+.pro img+p+p span{
+    display: inline-block;
+    width: 50%;
+}
+.pro .red{
+    font-size: 12px;
+    font-weight: bold;
+    color: #E4393C;
+}
+.pro .sold{
+    text-align: right;
+}
+/*经典搭配*/
+#right_pro{
+    width: 20%;
+    box-sizing: border-box;
+}
+#right_pro>div:first-child p{
+    padding: 8px 0;
+    text-align: center;
+    color: #E4393C;
+}
+#right_pro>div:nth-child(2) li{
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+

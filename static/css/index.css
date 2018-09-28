@@ -1,0 +1,555 @@
+/*主体顶部：样式*/
+#top{
+    border-bottom: 2px solid #D2364C;
+}
+#top>ul:first-child{
+    float: left;
+}
+#top ul li{
+    float: left;
+}
+#top>ul:first-child>li{
+    color: #FF5400;
+    padding: 12px 10px;
+}
+#top>ul:first-child>li:first-child, #top>ul:first-child>li>a{
+    font-weight: bold;
+    font-size: 16px;
+}
+/*主体头部：全部分类*/
+#top>ul:first-child>li:first-child{
+    background: #d2364c;
+    padding: 12px 58px;
+    color: #fff;
+    font-weight: normal;
+}
+#top>div{
+    float: right;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 6;
+}
+#top>div>div:first-child{
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    right: 149px;
+    top: -2px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -6px;
+    border-radius: 50%;
+    z-index: 8;
+}
+/*主体头部：我的福利左侧人头图*/
+#top>div>div:first-child>a{
+    display: block;
+    background: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+/*主体头部：我的福利*/
+#top>div>div:last-child>a{
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 7;
+    width: 150px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    background: url("../img/extra.png");
+    font-size: 16px;
+    color: #fcff00;
+}
+/*轮播图所在一整行的高度*/
+.left_nav{
+    height: 568px;
+}
+/*头部左侧导航列表样式*/
+aside.left{
+    top: -2px;
+    left: 0;
+    border-left: 1px solid #2b2b2b;
+}
+/*左侧黑色导航列表*/
+.left_title li{
+    position: relative;
+}
+/*li里黑色背景的div*/
+.left_title li>div:first-child{
+    background: #2b2b2b;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #252525;
+    height: 32px;
+    width: 179px;
+}
+/*鼠标移入时：左侧黑色导航列表样式改变*/
+.left_title>li>div:first-child.hover{
+    background: #fff;
+}
+.left_title>li>div:first-child>a.hover{
+    color: #5B5B5B;
+}
+.left_title img{
+    position: absolute;
+    left: 18px;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+}
+.left_title>li>div:first-child>a{
+    position: absolute;
+    top: 6px;
+    left: 55px;
+    color: #fff;
+    cursor: text;
+}
+.left_title span{
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    width: 13px;
+    height: 13px;
+    color: #9b9b9b;
+}
+/*黑色导航列表旁边隐藏的白色列表*/
+.left_title>li>div.lc_item{
+    position: absolute;
+    top: 0;
+    left: 179px;
+    display: none;
+    z-index: 2;
+    background: #fff;
+    box-sizing: border-box;
+    width: 765px;
+    height: 544px;
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 20px 40px 20px 45px;
+}
+.lc_item a{
+    color: #888;
+}
+/*上半部分div样式--蛋糕、点心等*/
+.lc_item>div:first-child{
+   padding-bottom: 30px;
+}
+.lc_item>div:first-child>div{
+    width: 50%;
+}
+.lc_item>div:first-child>div>h3{
+    color: #DC4157;
+    margin-bottom: 3px;
+}
+.lc_item>div:first-child>div a{
+    display: block;
+    border: 1px solid #ECECEC;
+    padding: 0 10px;
+    margin: 0 6px 6px 0;
+}
+/*设置所有li和上半部分所有div左浮动--蛋糕、点心等*/
+.lc_item>div:first-child>div, .lc_item ul li{
+    float: left;
+    color: #8A8A8A;
+}
+/*下半部分--实力商家*/
+.lc_item>div:nth-child(2){
+    max-width: 100%;
+    float: left;
+}
+.lc_item>div:nth-child(2)>h3+ul{
+    margin-top: 2px;
+    border-top: 1px solid #ECECEC;
+}
+.lc_item>div:nth-child(2) a{
+    display: block;
+    border-right: 1px solid #8A8A8A;
+    padding: 0 8px;
+    line-height: 1;
+    margin: 15px 0;
+}
+.lc_item>div:nth-child(2)>ul>li:first-child>a{
+    padding-left: 0;
+}
+
+/*轮播外部框样式*/
+section.middle{
+    position: absolute;
+    top: 8px;
+    left: 190px;
+    width: 760px;
+    height: 320px;
+    overflow: hidden;
+}
+/*四张大图*/
+section.middle ul:first-child{
+    position: absolute;
+    width: 500%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #6f42c1;
+}
+section.middle>ul:first-child>li{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+section.middle>ul:first-child img{
+    width: 100%;
+}
+/*轮播图下方四个圆点*/
+section.middle>ul:nth-child(2){
+    position: absolute;
+    bottom: 15px;
+    left: 340px;
+}
+section.middle>ul:nth-child(2) li{
+    float: left;
+    margin-left: 12px;
+}
+section.middle>ul:nth-child(2) a{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #666;
+    border-radius: 50%;
+}
+.selected{
+    background: #f40 !important;
+}
+/*轮播图上左右两个箭头*/
+.arrow{
+    font-size: 26px;
+    font-weight: bold;
+    color: #666;
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: #FFF704;
+    position: absolute;
+    top: 140px;
+}
+#left_arrow{
+    left: 20px;
+}
+#right_arrow{
+    right: 20px;
+}
+/*头部右侧样式*/
+aside.right{
+    background: #F9F9F9;
+    position: absolute;
+    height: 276px;
+    top: 8px;
+    right: 0;
+    padding: 22px 15px;
+}
+aside.right li:first-child p{
+    color: #EB3341;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F1F1F1;
+}
+aside.right li{
+    padding: 5px 0;
+    color: #333;
+}
+/*头部轮播图下四张图样式*/
+div.bottom{
+    position: absolute;
+    top: 340px;
+    left: 190px;
+}
+div.bottom li{
+    float: left;
+}
+div.bottom li:not(:last-child){
+    margin-right: 10px;
+}
+/*爆款特卖*/
+.onSale{
+    box-sizing: border-box;
+    width: 100%;
+    background: #FFD800 url(../img/sale-t.jpg) no-repeat;
+    padding: 25px 8px 8px 8px;
+}
+.onSale>div{
+    text-align: right;
+    height: 70px;
+}
+.onSale>div ul{
+    float: right;
+}
+.onSale>div li{
+    float: left;
+    text-align: center;
+    height: 39px;
+    line-height: 39px;
+}
+/*倒计时背景色*/
+.onSale>div li[class="cir"]{
+    background: #8B5826;
+    box-sizing: border-box;
+    width: 39px;
+    border: 1px solid #71400F;
+    border-radius: 50%;
+}
+.onSale>div li[class="cir"] span{
+    font-size: 22px;
+    color: #FFEEE0;
+}
+.onSale>div li[class="dot"]{
+    width: 20px;
+    font-size: 26px;
+    color: #5D2400;
+}
+/*爆款特卖图片列表*/
+.onSale_list li{
+    background: #fff;
+    float: left;
+    padding: 45px 15px 10px 25px;
+}
+.onSale_list li:not(:last-child){
+    margin-right: 5px;
+}
+/*爆款特卖图片列表项内大图*/
+.onSale_list li>a:first-child{
+    display: block;
+    padding: 0 26px 0;
+}
+.onSale_list li>a:nth-child(2){
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+.onSale_list li div span{
+    font-size: 24px;
+    color: #F52E1F;
+}
+.onSale_list li div span:first-child{
+    font-size: 18px;
+}
+/*秒杀按钮*/
+.onSale_list li div button{
+    float: right;
+    border: none;
+    color: #fff;
+    padding: 6px 10px;
+    background: #F52E1F;
+}
+.onSale_list li div button:hover{
+    color: #000;
+}
+/*1F：甜品*/
+.floor{
+   margin-top: 20px;
+}
+/*1F：甜品标题*/
+.fl_title h3{
+    display: inline-block;
+    font-size: 20px;
+    margin-right: -8px;
+}
+.fl_title h3+span{
+    display: inline-block;
+    font-size: 0;
+    border: 7px solid transparent;
+    border-right-color: #FFF7D1;
+}
+.fl_title h3+span+span{
+    background: #FFF7D1;
+    color: #977A6F;
+    padding: 4px;
+}
+.fl_title ul{
+    float: right;
+}
+.fl_title ul li{
+    float: left;
+    padding-left: 10px;
+    color: #5F5F5F;
+    padding-top: 5px;
+}
+/*1F：甜品主体*/
+.fl_body{
+    box-sizing: border-box;
+    margin-top: 8px;
+    border-top: 2px solid #68937F;
+    height: 402px;
+}
+.fl_body>div{
+    float: left;
+    box-sizing: border-box;
+}
+.fl_body h3, .fl_body p{
+    text-align: center;
+}
+.fl_body p{
+    font-size: 12px;
+    color: #666;
+}
+/*鼠标悬浮四周有阴影的div样式*/
+div:empty {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 7px solid #fff;
+    z-index: 3;
+    background: transparent;
+    transition: all linear 0.3s;
+}
+div:empty:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 6px #B7B7B7;
+    z-index: 4;
+}
+/*每个楼层内容上方的粗线条颜色*/
+.f2{
+    border-top: 2px solid #D17B28 !important;
+}
+.f3{
+    border-top: 2px solid #594E90 !important;
+}
+.f4{
+    border-top: 2px solid #CF7986 !important;
+}
+.f5{
+    border-top: 2px solid #648B6C !important;
+}
+.f6{
+    border-top: 2px solid #CD6655 !important;
+}
+.f7{
+    border-top: 2px solid #9C7B36 !important;
+}
+.f8{
+    border-top: 2px solid #708DB7 !important;
+}
+.f9{
+    border-top: 2px solid #CAA463 !important;
+}
+.f10{
+    border-top: 2px solid #6481C3 !important;
+}
+/*1F 第一列：橙子*/
+.fl_body>div:first-child{
+    width: 18%;
+    height: 100%;
+}
+/*核桃链接列表*/
+.walnut{
+    padding: 25px;
+}
+.walnut p a:nth-child(2){
+    display: inline-block;
+    padding: 0 28px 10px 28px;
+}
+.walnut+div>p:first-child>a{
+    font-size: 16px;
+    color: #F03726;
+    font-weight: bold;
+}
+.walnut+div>p:last-child>a{
+    font-size: 12px;
+    color: #666;
+}
+.walnut+div+div{
+    width: 85%;
+    margin: 20px 0 0 15px;
+}
+.fl_body>div:first-child img,
+.fl_body>div:nth-child(2) img{
+    width: 100%;
+    transition: all .3s ease-in;
+}
+.fl_body>div:first-child img:hover,
+.fl_body>div:nth-child(2) img:hover{
+    transform: scale(1.05);
+}
+/*iF 第二列：洋酒*/
+.fl_body>div.wine{
+    background: linear-gradient(to bottom, #6BDEA7, #689480);
+    height: 100%;
+    width: 28%;
+}
+.fl_body>div.wine p{
+    color: #fff;
+}
+.fl_body>div.wine p:first-child{
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 35px;
+}
+.fl_body>div.wine p:nth-child(2){
+    font-size: 12px;
+    padding-top: 5px;
+}
+.fl_body>div.wine>div{
+    width: 85%;
+    margin: 25px auto;
+}
+/*1F 第三列：殷桃+荔枝(同蓝莓列)*/
+.lych, .orange2{
+    width: 18%;
+    height: 100%;
+    border-right: 1px solid #F0F0F0;
+}
+.lych_top, .lych_bottom, .pie>div{
+    height: 50%;
+}
+.lych_top, .pie>div:first-child{
+    border-bottom: 1px solid #F0F0F0;
+}
+.lych_top, .lych_bottom, .or2_main{
+    position: relative;
+}
+.middle_img, .bottom_text, .pie>div>div:not(:first-child){
+    width: 68%;
+    margin: 0 auto;
+    position: absolute;
+    left: 16%;
+}
+.middle_img img, .or2_img img{
+    width: 100%;
+}
+.middle_img{
+    top: 10px;
+}
+.bottom_text{
+    bottom: 5px;
+}
+/*1F 第四列：橙子*/
+.or2_main{
+    width: 100%;
+    height: 100%;
+}
+.or2_text, .or2_img{
+    width: 86%;
+    margin: 0 auto;
+    position: absolute;
+    left: 7%;
+}
+.or2_text{
+    top: 40px;
+}
+.or2_img{
+    top: 150px;
+}
+.or2_main>div:first-child{
+    border: 10px solid #fff;
+}
+/*1F 第五列：pie+蓝莓(同荔枝列)*/
+

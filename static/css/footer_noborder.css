@@ -1,0 +1,19 @@
+ul li{
+    float: left;
+    padding: 0 6px;
+    color: #E1E1E1;
+}
+ul li a{
+    color: #6C6C6C;
+}
+ul li:first-child{
+    padding-left: 0;
+}
+.container>div{
+    padding: 10px 0 5px 5px;
+    margin-top: 18px;
+    border-bottom: 1px solid #E1E1E1;
+}
+.container>p{
+    margin: 10px auto 0;
+}

@@ -1,0 +1,116 @@
+/*顶部logo图片*/
+.top{
+    background: #F5F5F5;
+}
+.top>div, .main>div{
+    width: 1000px;
+    margin: 0 auto;
+}
+.top img{
+    width: 140px;
+    vertical-align: middle;
+}
+/*中间粉色背景部分*/
+.main{
+    background: #FD7A72;
+}
+.main img{
+    margin-bottom: 55px;
+}
+.main>div{
+    position: relative;
+}
+/*右侧表单*/
+.main>div>div{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    box-sizing: border-box;
+    width: 370px;
+    height: 430px;
+    background: #F8F8F8;
+}
+.form_title{
+    padding: 10px 25px 30px;
+}
+.form_title span{
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*相对于.main>div>div的定位*/
+.form_body{
+    width: 370px;
+    height: 354px;
+    overflow: hidden;
+    background: #F8F8F8;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    transition: all linear .3s;
+}
+.form_title>div:last-child{
+    transform: translateX(100%);
+    visibility: hidden;
+    /*left: 370px;*/
+}
+/*.form_body点击后的样式*/
+.fb_clicked{
+    left: 0;
+
+}
+/*复选框所在行的样式*/
+.form_body .checkB{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form_body .checkCode input{
+    width: 81%;
+    /*min-width: 200px;*/
+}
+.form_body .checkCode a{
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 9px 5px;
+    font-size: 16px;
+    color: #333;
+    background: #F4F4F4;
+    vertical-align: bottom;
+    text-align: center;
+    float: right;
+}
+form>p{
+    margin: 5px 30px;
+    white-space: nowrap;
+}
+input[type='email'], input[type='text'], input[type='password']{
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid transparent;
+    background: #fff;
+    padding: 12px 0 12px 45px;
+    color: #757575;
+}
+input[type='email']:focus, input[type='text']:focus, input[type='password']:focus{
+    border: 1px solid #A5C6FE;
+}
+input[type='submit']{
+    width: 310px;
+    background: #0E90D2;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px;
+}
+input[type='submit']:focus{
+    background: #0C75AC;
+}
+input[type='submit']:hover{
+    background: #0C79B1 ;
+}
+

@@ -1,0 +1,106 @@
+/*顶部logo图片*/
+.top{
+    background: #F5F5F5;
+}
+.top>div, .main>div{
+    width: 1000px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.top img{
+    width: 140px;
+    /*border: 1px solid blue;*/
+    vertical-align: middle;
+}
+/*中间粉色背景部分*/
+.main{
+    background: #FD7A72;
+}
+.main a:hover:not(.blackA){
+    color: #237096;
+}
+.main img{
+    margin-bottom: 55px;
+}
+.main>div, form>p:first-child, .cb{
+    position: relative;
+}
+.main>div>div{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    /*border: 1px solid blue;*/
+    background: #F8F8F8;
+}
+form>p,form>div{
+    /*border: 1px solid red;*/
+    margin: 18px 20px;
+}
+form>div.inText{
+    background: #fff;
+}
+form>div:last-child{
+    margin-bottom: 110px;
+}
+form>p:first-child{
+    text-align: center;
+    padding: 5px 0;
+}
+form>p>span{
+    font-size: 16px;
+    font-weight: bold;
+}
+span+a, .cb>a{
+    position: absolute;
+    right: 0;
+}
+input[type='text'], input[type='password']{
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid transparent;
+    background: #fff;
+    padding: 14px 0 14px 45px;
+    color: #757575;
+    border-radius: 5px;
+}
+.inUser{
+    margin-bottom: 1px;
+}
+.inPwd{
+    margin-top: 0;
+}
+input[type='text']:focus, input[type='password']:focus{
+    border: 1px solid #A5C6FE;
+}
+form>p:first-child>a{
+    line-height: 1;
+    padding: 6px;
+    background: #E6E6E6;
+    float: right;
+}
+form>p:first-child>a:hover{
+    background: #D4D4D4;
+}
+input[type='submit']{
+    width: 324px;
+    background: #0E90D2;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px;
+}
+input[type='submit']:focus{
+    background: #0C75AC;
+}
+input[type='submit']:hover{
+    background: #0C79B1 ;
+  }
+form>div>p:last-child{
+    text-align: center;
+}
+form>div>p:last-child>a{
+    display: inline-block;
+    padding: 8px 5px 8px 40px;
+    /*border: 1px solid red;*/
+}
+

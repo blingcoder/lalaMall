@@ -1,0 +1,30 @@
+.container_small>div{
+    padding: 30px 0 30px 50px;
+}
+.container_small img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#buyer_info{
+    padding: 0 58px;
+}
+.big_font{
+    font-size: 18px;
+}
+#buyer_info a{
+    margin: 0 5px;
+}
+#buyer_info>div{
+    border: 1px solid #F23E00;
+    display: inline-block;
+    padding: 0 10px;
+}
+#buyer_info>div>p:not(:nth-child(2)){
+    margin: 10px 0;
+}
+#buyer_info>div>p:nth-child(2){
+    margin: 18px 0;
+}
+#buyer_info>p{
+    margin: 8px 0;
+}

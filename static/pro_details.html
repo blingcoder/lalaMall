@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/pro_details.css"/>
+        <title>商品详情页</title>
+    </head>
+    <body>
+        <!--头部-->
+        <header id="header" class="container"></header>
+        <div class="container" style="border: 1px solid red">
+            <!--主体部分-->
+            <!--主体顶部-->
+            <div id="top" class="clearfix">
+                <ul>
+                    <li>全部分类</li>
+                    <li><a href="#">首页</a></li>
+                    <li>|</li>
+                    <li><a href="#">闪购</a></li>
+                    <li>|</li>
+                    <li><a href="#">限时抢</a></li>
+                    <li>|</li>
+                    <li><a href="#">团购</a></li>
+                    <li>|</li>
+                    <li><a href="#">大包装</a></li>
+                </ul>
+                <div>
+                    <div>
+                        <a href="#"></a>
+                    </div>
+                    <div>
+                        <a href="#">我的福利 ></a>
+                    </div>
+                </div>
+            </div>
+            <!--主体头部面包屑导航-->
+            <div id="top_nav">
+                <ul>
+                    <li><a href="index.html" class="navy">首页</a></li>
+                    <li>/</li>
+                    <li><a href="#" class="navy">分类</a></li>
+                    <li>/</li>
+                    <li>内容</li>
+                </ul>
+            </div>
+            <!--主体头部图+文字-->
+            <div class="clearfix">
+                <!--左侧图片-->
+                <div id="top_left">
+                    <div id="md_div">
+                        <img src="img/01_mid.jpg"/>
+                    </div>
+                    <div id="lg_div"></div>
+                    <div id="mask"></div>
+                    <div id="sm_div">
+                        <div></div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <img src="img/01_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/02_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/03_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/04_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/05_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/06_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/07_small.jpg"/>
+                                </li>
+                                <li>
+                                    <img src="img/08_small.jpg"/>
+                                </li>
+                            </ul>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+                <!--右侧文字-->
+                <div id="top_right">
+                    <h3>良品铺子 手剥松子218g 坚果炒货 巴西松子</h3>
+                    <div>
+                        <p>
+                            <span class="light_gray">店铺优惠</span>
+                            <span class="light_red bold_font top_font space">购物满2件打8折，满3件7折</span>
+                            <span class="light_red bold_font top_font">点击领券</span>
+                        </p>
+                        <div id="onsale_price">
+                            <p>
+                                <span class="light_gray">促销价</span>
+                                <span class="dark_red money">¥</span><span class="dark_red bold_font price">56.90</span>
+                            </p>
+                            <p>
+                                <span class="light_gray">原价</span>
+                                <span class="line_through">¥98.00</span>
+                            </p>
+                        </div>
+                        <!--优惠券-->
+                        <div id="cheque">
+                            <span class="light_gray">优惠券</span>
+                            <span>125减5</span>
+                            <span>198减10</span>
+                            <span>298减20</span>
+                        </div>
+                    </div>
+                    <!--配送至-->
+                    <div id="send_to">
+                        <span class="light_gray">配送至</span>
+                        <select name="provinces" id="provinces">
+                            <option value="zj" selected>浙江省</option>
+                            <option value="hb">湖北省</option>
+                        </select>
+                        <select name="cities" id="cities">
+                            <option value="wz" selected>温州市</option>
+                            <option value="wh">武汉市</option>
+                        </select>
+                        <select name="areas" id="areas">
+                            <option value="ra" selected>瑞安区</option>
+                            <option value="hs">洪山区</option>
+                        </select>
+                        <span>快递10元</span>
+                    </div>
+                    <!--销量-->
+                    <div id="sold">
+                        <a href="#">月销量<span class="dark_red">1015</span></a>
+                        <a href="#">累计销量<span class="dark_red">6015</span></a>
+                        <a href="#">累计评价<span class="dark_red">640</span></a>
+                    </div>
+                    <!--口味-->
+                    <div id="taste" class="clearfix">
+                        <div>口味</div>
+                        <ul>
+                            <li>原味
+                                <span></span>
+                            </li>
+                            <li>奶油
+                                <span></span>
+                            </li>
+                            <li>炭烧
+                                <span></span>
+                            </li>
+                            <li>咸香
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--包装-->
+                    <div id="pack" class="clearfix">
+                        <div>包装</div>
+                        <ul>
+                            <li>手袋单人份
+                                <span></span>
+                            </li>
+                            <li>礼盒双人份
+                                <span></span>
+                            </li>
+                            <li>全家福礼包
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--数量-->
+                    <div id="num" class="clearfix">
+                        <div>数量</div>
+                        <span>-</span>
+                        <input type="text" value="1"/>
+                        <span>+</span>
+                        <span>库存1000件</span>
+                    </div>
+                    <!--立即购买-->
+                    <div>
+                        <input class="btn btn_peach" type="button" value="立即购买"/>
+                        <input class="btn btn_red" type="button" value="加入购物车"/>
+                    </div>
+                </div>
+            </div>
+            <!--优惠套餐-->
+            <div id="cheap_set">
+                <h3 class="light_red">优惠套餐</h3>
+                <div class="clearfix">
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="img/cp.jpg"/>
+                                </a>
+                                <p>
+                                    <a href="#">萨拉米 1+1小鸡腿</a>
+                                </p>
+                                <span class="light_red bold_font">¥ 29.90</span>
+                                <span class="cross_gray">¥ 199.00</span>
+                            </div>
+                        </li>
+                        <li>+</li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="img/cp2.jpg"/>
+                                </a>
+                                <p>
+                                    <a href="#">ZEK 原味海苔</a>
+                                </p>
+                                <span class="light_red bold_font">¥ 8.90</span>
+                                <span class="cross_gray">¥ 199.00</span>
+                            </div>
+                        </li>
+                        <li>=</li>
+                        <li>
+                            <div>
+                                <h3 class="light_red bold_font">套餐价:¥ 35.00</h3>
+                                <p class="small_font">共省:￥463.00</p>
+                                <button class="btn btn_red">立即购买</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--宝贝详情-->
+            <div id="details" class="clearfix">
+                <!--详情左侧-->
+                <div id="details_left" class="clearfix">
+                    <ul>
+                        <li>
+                            <div>看了又看</div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/browse1.jpg"/>
+                                <p>
+                                    <a href="#">【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味</a>
+                                </p>
+                                <h5 class="small_font light_red">¥ 35.90</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/browse1.jpg"/>
+                                <p>
+                                    <a href="#">【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味</a>
+                                </p>
+                                <h5 class="small_font light_red">¥ 35.90</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/browse1.jpg"/>
+                                <p>
+                                    <a href="#">【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味</a>
+                                </p>
+                                <h5 class="small_font light_red">¥ 35.90</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/browse1.jpg"/>
+                                <p>
+                                    <a href="#">【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味</a>
+                                </p>
+                                <h5 class="small_font light_red">¥ 35.90</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/browse1.jpg"/>
+                                <p>
+                                    <a href="#">【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味</a>
+                                </p>
+                                <h5 class="small_font light_red">¥ 35.90</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--详情右侧-->
+                <div id="details_right" class="clearfix">
+                    <!--详情标题-->
+                    <div id="details_title" class="clearfix">
+                        <ul>
+                            <li><a href="#content">宝贝详情</a></li>
+                            <li><a href="#comments">全部评价</a></li>
+                            <li><a href="#prefer">猜你喜欢</a></li>
+                        </ul>
+                    </div>
+                    <div id="details_content" class="clearfix" style="border: 1px solid orange">
+                        <!--宝贝详情-->
+                        <div id="intro" class="clearfix" style="border: 1px solid blue">
+                            <p>产品参数:</p>
+                            <ul class="clearfix">
+                                <li>产品类型: <span>烘炒类</span></li>
+                                <li>原料产地: <span>巴基斯坦</span></li>
+                                <li>产地: <span>湖北省武汉市</span></li>
+                                <li>配料表: <span>进口松子、食用盐</span></li>
+                                <li>产品规格: <span>210g</span></li>
+                                <li>保质期: <span>180天</span></li>
+                                <li>产品标准号: <span>GB/T 22165</span></li>
+                                <li>生产许可证编号：<span>QS4201 1801 0226</span></li>
+                                <li>储存方法：<span>请放置于常温、阴凉、通风、干燥处保存</span></li>
+                                <li>食用方法：<span>开袋去壳即食</span></li>
+                            </ul>
+                            <p>商品细节</p>
+                            <img src="img/tw1.jpg"/>
+                            <img src="img/tw2.jpg"/>
+                            <img src="img/tw3.jpg"/>
+                            <img src="img/tw4.jpg"/>
+                            <img src="img/tw5.jpg"/>
+                            <img src="img/tw6.jpg"/>
+                            <img src="img/tw7.jpg"/>
+                        </div>
+                        <!--全部评价-->
+                        <div id="comments" class="clearfix">
+                            <div class="clearfix">
+                                <div>
+                                    <p class="light_red">100<span>%</span></p>
+                                    <p>好评度</p>
+                                </div>
+                                <div>
+                                    <p class="light_red bold_font">买家印象</p>
+                                    <ul>
+                                        <li>“味道不错(<span>2177</span>)”</li>
+                                        <li>“颗粒饱满(<span>1860</span>)”</li>
+                                        <li>“口感好(<span>1823</span>)”</li>
+                                        <li>“商品不错(<span>1689</span>)”</li>
+                                        <li>“香脆可口(<span>1488</span>)”</li>
+                                        <li>“个个开口(<span>1392</span>)”</li>
+                                        <li>“价格便宜(<span>1119</span>)”</li>
+                                        <li>“特价买的(<span>865</span>)”</li>
+                                        <li>“皮很薄(<span>831</span>)”</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <ul>
+                                    <li>全部评价<span>(32)</span></li>
+                                    <li>好评<span>(32)</span></li>
+                                    <li>中评<span>(32)</span></li>
+                                    <li>差评<span>(32)</span></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix">
+                                <ul>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">l***4(匿名)</a>
+                                                <span>评论于</span><span>2015年10月28日 11:33</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>没有色差，很暖和……美美的</p>
+                                                <p>颜色分类：蓝调灰  尺码：2XL</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">h***n(匿名)</a>
+                                                <span>评论于</span><span>2015年11月25日 12:48</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>式样不错，初冬穿</p>
+                                                <p>颜色分类：柠檬黄  尺码：L</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">l***4(匿名)</a>
+                                                <span>评论于</span><span>2015年10月28日 11:33</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>没有色差，很暖和……美美的</p>
+                                                <p>颜色分类：蓝调灰  尺码：2XL</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">h***n(匿名)</a>
+                                                <span>评论于</span><span>2015年11月25日 12:48</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>式样不错，初冬穿</p>
+                                                <p>颜色分类：柠檬黄  尺码：L</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">l***4(匿名)</a>
+                                                <span>评论于</span><span>2015年10月28日 11:33</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>没有色差，很暖和……美美的</p>
+                                                <p>颜色分类：蓝调灰  尺码：2XL</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">b***1(匿名)</a>
+                                                <span>评论于</span><span>2015年11月02日 17:46</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>摸起来丝滑柔软，不厚，没色差，颜色好看！买这个衣服还接到诈骗电话，我很好奇他们是怎么知道我买了这件衣服，并且还知道我的电话的！</p>
+                                                <p>颜色分类：柠檬黄  尺码：S</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div>
+                                            <a href="#"><img src="img/getAvatar.do.jpg"/></a>
+                                        </div>
+                                        <div>
+                                            <div class="com_title">
+                                                <a class="bold_font" href="#">h***n(匿名)</a>
+                                                <span>评论于</span><span>2015年11月25日 12:48</span>
+                                            </div>
+                                            <div class="com_body">
+                                                <p>式样不错，初冬穿</p>
+                                                <p>颜色分类：柠檬黄  尺码：L</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--分页-->
+                            <div class="pagination clearfix">
+                                <ul>
+                                    <li><a href="#">«</a></li>
+                                    <li><a class="active" href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                            <!--警告信息-->
+                            <div class="alert">
+                                <p>购买前请查看该商品的<span>购物保障</span>，明确您的售后保障权益。</p>
+                            </div>
+                        </div>
+                        <!--猜你喜欢-->
+                        <div id="prefer" class="clearfix">
+                            <ul class="clearfix">
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/imgsearch1.jpg"/>
+                                    </a>
+                                    <p>
+                                        <a href="#">【良品铺子_开口松子】零食坚果特产炒货东北红松子奶油味</a>
+                                    </p>
+                                    <p>¥ 298.00</p>
+                                </li>
+                            </ul>
+                            <!--分页-->
+                            <div class="pagination clearfix">
+                                <ul>
+                                    <li><a href="#">«</a></li>
+                                    <li><a class="active" href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--尾部-->
+        <!--<footer id="footer" class="container"></footer>-->
+        <!--最右侧黑色导航-->
+        <div class="black_nav">
+            <div class="nav_top">
+                <!--头像-->
+                <div class="avatar"><a href="#"><span></span></a></div>
+                <!--求头像-->
+                <div class="avatar_left">
+                    <div>
+                        <div class="avatar_default clearfix">
+                            <div><img src="img/no-img_mid_.jpg"/></div>
+                            <div>
+                                <p>用户名 : sl1903</p>
+                                <p>级别 : 普通会员</p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#">我的订单</a>
+                            <a href="#">我的收藏</a>
+                        </div>
+                    </div>
+                    <span></span>
+                </div>
+                <!--购物车-->
+                <div class="shop_card"><a href="#"><span></span>购<span>物</span>车<span>0</span></a></div>
+                <!--我的资产-->
+                <div class="wallet"><a href="#"><span></span></a></div>
+                <!--我的资产悬浮出现框-->
+                <div class="square_left wallet_left">
+                    <div><a href="#">我的资产</a></div>
+                    <span></span>
+                </div>
+                <!--我的足迹-->
+                <div class="trace"><a href="#"><span></span></a></div>
+                <!--我的足迹悬浮出现框-->
+                <div class="square_left trace_left">
+                    <div><a href="#">我的足迹</a></div>
+                    <span></span>
+                </div>
+                <!--我的收藏-->
+                <div class="store"><a href="#"><span></span></a></div>
+                <!--我的收藏悬浮出现框-->
+                <div class="square_left store_left">
+                    <div><a href="#">我的收藏</a></div>
+                    <span></span>
+                </div>
+                <!--我要充值-->
+                <div class="recharge"><a href="#"><span></span></a></div>
+                <!--我要充值悬浮出现框-->
+                <div class="square_left recharge_left">
+                    <div><a href="#">我要充值</a></div>
+                    <span></span>
+                </div>
+            </div>
+            <div class="nav_bottom">
+                <!--客服中心-->
+                <div class="server"><a href="#"><span></span></a></div>
+                <!--客服中心悬浮出现框-->
+                <div class="square_left server_left">
+                    <div><a href="#">客服中心</a></div>
+                    <span></span>
+                </div>
+                <!--二维码-->
+                <div class="code"><a href="#"><span></span></a></div>
+                <!--大二维码-->
+                <div class="big_code">
+                    <div><img src="img/weixin_code_145.png"/></div>
+                    <span></span>
+                </div>
+                <!--回到顶部-->
+                <div class="toTop"><a href="#"><span></span></a></div>
+            </div>
+        </div>
+    </body>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+</html>
