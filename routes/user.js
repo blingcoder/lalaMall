@@ -11,7 +11,8 @@ router.post('/login',(req, res)=>{
     if(!uname){
         res.send('用户名不能为空');
         return;
-    }else if(!upwd){
+    }
+    if(!upwd){
         res.send('用户密码不能为空');
         return;
     }
@@ -19,10 +20,11 @@ router.post('/login',(req, res)=>{
     var sql = 'SELECT * FROM la_user WHERE uname=? AND upwd=?';
     pool.query(sql,[uname, upwd], (err, result)=>{
         if(err) throw err;
-        if(result.length>0)
-            res.send('<script>alert("登录成功！");location.href="http://127.0.0.1:8080/index.html";</script>');
-        else
-            res.send('登录失败！用户名或密码错误！');
+        if(result.length>0){
+            res.send({code:1,msg:'登录成功'});
+        }else{
+            res.send({code:-3,msg:'登录失败！用户名或密码错误！'});
+        }
     })
 });
 

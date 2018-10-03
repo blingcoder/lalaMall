@@ -1,4 +1,4 @@
-/*¶¥²¿logoÍ¼Æ¬*/
+/*é¡¶éƒ¨logoå›¾ç‰‡*/
 .top{
     background: #F5F5F5;
 }
@@ -12,7 +12,7 @@
     /*border: 1px solid blue;*/
     vertical-align: middle;
 }
-/*ÖÐ¼ä·ÛÉ«±³¾°²¿·Ö*/
+/*ä¸­é—´ç²‰è‰²èƒŒæ™¯éƒ¨åˆ†*/
 .main{
     background: #FD7A72;
 }
@@ -22,35 +22,66 @@
 .main img{
     margin-bottom: 55px;
 }
-.main>div, form>p:first-child, .cb{
+.main>div, .cb{
     position: relative;
 }
 .main>div>div{
     position: absolute;
     top: 20px;
     right: 0;
-    /*border: 1px solid blue;*/
     background: #F8F8F8;
 }
 form>p,form>div{
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
     margin: 18px 20px;
 }
-form>div.inText{
+form>div.post-title{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 0;
+    /* border: 1px solid red; */
+}
+form>div.post-body{
     background: #fff;
+    margin-top: 0;
+    /* border: 1px solid red; */
 }
 form>div:last-child{
     margin-bottom: 110px;
 }
-form>p:first-child{
+form>div.post-title>p.normal{
     text-align: center;
-    padding: 5px 0;
+    z-index: 10;
+    border: 1px solid #F8F8F8;
+    background: #F8F8F8;
 }
-form>p>span{
+form>div.post-title>p.err{
+    border: 1px solid #f40;
+    background: #F8F8F8 url(../img/err.png) no-repeat 5px center;
+    padding: 0 25px;
+    text-align: left;
+    z-index: 9;
+    color: #666;
+}
+.normal, .err{
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+form p>span{
     font-size: 16px;
     font-weight: bold;
 }
-span+a, .cb>a{
+.normal>a{
+    line-height: 1;
+    padding: 6px;
+    background: #E6E6E6;
+    top: 7px;
+}
+.normal>a, .cb>a{
     position: absolute;
     right: 0;
 }
@@ -64,6 +95,7 @@ input[type='text'], input[type='password']{
     border-radius: 5px;
 }
 .inUser{
+    margin-top: 4px;
     margin-bottom: 1px;
 }
 .inPwd{
@@ -72,16 +104,10 @@ input[type='text'], input[type='password']{
 input[type='text']:focus, input[type='password']:focus{
     border: 1px solid #A5C6FE;
 }
-form>p:first-child>a{
-    line-height: 1;
-    padding: 6px;
-    background: #E6E6E6;
-    float: right;
-}
 form>p:first-child>a:hover{
     background: #D4D4D4;
 }
-input[type='submit']{
+input[type='button']{
     width: 324px;
     background: #0E90D2;
     font-size: 16px;
