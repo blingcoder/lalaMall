@@ -9,7 +9,7 @@
     <body>
         <!--头部-->
         <header id="header" class="container"></header>
-        <div class="container" style="border: 1px solid red">
+        <div class="container">
             <!--主体部分-->
             <!--主体顶部-->
             <div id="top" class="clearfix">
@@ -55,7 +55,7 @@
                     <div id="super_mask"></div>
                     <div id="lg_div"></div>
                     <div id="sm_div">
-                        <div id="arrowL"></div>
+                        <div id="arrowL" class="disabled"></div>
                         <div>
                             <ul>
                                 <li>
@@ -141,33 +141,19 @@
                     <div id="taste" class="clearfix">
                         <div>口味</div>
                         <ul>
-                            <li>原味
-                                <span></span>
-                            </li>
-                            <li>奶油
-                                <span></span>
-                            </li>
-                            <li>炭烧
-                                <span></span>
-                            </li>
-                            <li>咸香
-                                <span></span>
-                            </li>
+                            <li class="active">原味</li>
+                            <li>奶油</li>
+                            <li>炭烧</li>
+                            <li>咸香</li>
                         </ul>
                     </div>
                     <!--包装-->
                     <div id="pack" class="clearfix">
                         <div>包装</div>
                         <ul>
-                            <li>手袋单人份
-                                <span></span>
-                            </li>
-                            <li>礼盒双人份
-                                <span></span>
-                            </li>
-                            <li>全家福礼包
-                                <span></span>
-                            </li>
+                            <li class="active">手袋单人份</li>
+                            <li>礼盒双人份</li>
+                            <li>全家福礼包</li>
                         </ul>
                     </div>
                     <!--数量-->
@@ -176,7 +162,7 @@
                         <span>-</span>
                         <input type="text" value="1"/>
                         <span>+</span>
-                        <span>库存1000件</span>
+                        <span>库存<span>1000</span>件</span>
                     </div>
                     <!--立即购买-->
                     <div>
@@ -286,14 +272,14 @@
                     <!--详情标题-->
                     <div id="details_title" class="clearfix">
                         <ul>
-                            <li><a href="#content">宝贝详情</a></li>
-                            <li><a href="#comments">全部评价</a></li>
-                            <li><a href="#prefer">猜你喜欢</a></li>
+                            <li><a href="#intro" class="active" data-target="#intro">宝贝详情</a></li>
+                            <li><a href="#comments" data-target="#comments">全部评价</a></li>
+                            <li><a href="#prefer" data-target="#prefer">猜你喜欢</a></li>
                         </ul>
                     </div>
-                    <div id="details_content" class="clearfix" style="border: 1px solid orange">
+                    <div id="details_content" class="clearfix">
                         <!--宝贝详情-->
-                        <div id="intro" class="clearfix" style="border: 1px solid blue">
+                        <div id="intro" class="clearfix show">
                             <p>产品参数:</p>
                             <ul class="clearfix">
                                 <li>产品类型: <span>烘炒类</span></li>
@@ -317,7 +303,7 @@
                             <img src="img/tw7.jpg"/>
                         </div>
                         <!--全部评价-->
-                        <div id="comments" class="clearfix">
+                        <div id="comments" class="clearfix hideR">
                             <div class="clearfix">
                                 <div>
                                     <p class="light_red">100<span>%</span></p>
@@ -548,7 +534,7 @@
                             </div>
                         </div>
                         <!--猜你喜欢-->
-                        <div id="prefer" class="clearfix">
+                        <div id="prefer" class="clearfix hide">
                             <ul class="clearfix">
                                 <li>
                                     <a href="#">
@@ -672,12 +658,12 @@
                                 </ul>
                             </div>
                         </div>
+                        <!--尾部-->
+                        <footer id="footer" class="container"></footer>
                     </div>
                 </div>
             </div>
         </div>
-        <!--尾部-->
-        <!--<footer id="footer" class="container"></footer>-->
         <!--最右侧黑色导航-->
         <div class="black_nav">
             <div class="nav_top">
@@ -751,7 +737,7 @@
             </div>
         </div>
     </body>
-    <script src="js/jquery-1.11.3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/header.js"></script>
     <script src="js/pro_details.js"></script>

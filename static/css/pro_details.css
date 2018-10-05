@@ -1,4 +1,4 @@
-/*���嶥������ʽ*/
+/*主体顶部：样式*/
 #top{
     border-bottom: 2px solid #D2364C;
 }
@@ -16,7 +16,7 @@
     font-weight: bold;
     font-size: 16px;
 }
-/*����ͷ����ȫ������*/
+/*主体头部：全部分类*/
 #top>ul:first-child>li:first-child{
     background: #d2364c;
     padding: 12px 58px;
@@ -44,7 +44,7 @@
     border-radius: 50%;
     z-index: 8;
 }
-/*����ͷ�����ҵĸ��������ͷͼ*/
+/*主体头部：我的福利左侧人头图*/
 #top>div>div:first-child>a{
     display: block;
     background: #000;
@@ -52,7 +52,7 @@
     height: 35px;
     border-radius: 50%;
 }
-/*����ͷ�����ҵĸ���*/
+/*主体头部：我的福利*/
 #top>div>div:last-child>a{
     display: block;
     position: absolute;
@@ -67,13 +67,13 @@
     font-size: 16px;
     color: #fcff00;
 }
-/*���ϴ�index.css copy����*/
+/*以上从index.css copy过来*/
 
-/*a���������ɫ*/
+/*a标记悬浮变色*/
 .navy:hover{
     color: #237096;
 }
-/*ͷ�����м����*/
+/*头部面包屑导航*/
 #top_nav{
     display: inline-block;
     padding: 20px 0;
@@ -89,11 +89,11 @@
 #top_nav>ul>li:nth-child(2n),#top_nav>ul>li:last-child{
     color: #999;
 }
-/*ͷ�����ͼ+�Ҳ����۸�*/
+/*头部左侧图+右侧标题价格*/
 #top_nav+div>div{
     float: left;
 }
-/*ͷ�����ͼ*/
+/*头部左侧图*/
 #top_left{
     position: relative;
     height: 482px;
@@ -155,6 +155,8 @@
     background: url("../img/__sprite.png") 0 -54px;
     margin-top: 24px;
 }
+#arrowL.disabled{background: url("../img/disabled-prev.png")}
+#arrowR.disabled{background: url("../img/disabled-next.png")}
 #arrowL{
     margin-right: 3px;
 }
@@ -174,7 +176,7 @@
     left: 0;
     width: 560px;
 }
-/*ͷ���Ҳ����۸�*/
+/*头部右侧标题价格*/
 #top_right{
     padding: 5px 0 0 25px;
 }
@@ -205,39 +207,39 @@
     width: 710px;
     margin-bottom: 8px;
 }
-/*��3��7��ǰ����*/
+/*满3件7折前后间距*/
 .space{
     padding: 0 400px 0 8px;
 }
-/*?����*/
+/*?符号*/
 .money{
     font-weight: normal !important;
     padding-left: 20px;
 }
-/*ǳ�����*/
+/*浅大红字*/
 .light_red{
     color: #E4393C;
 }
-/*������*/
+/*深大红字*/
 .dark_red{
     color: #CC0000;
 }
 .bold_font{
     font-weight: bold;
 }
-/*�����ƶ���*/
+/*向上移动字*/
 .top_font{
     line-height: 1.2;
     vertical-align: top;
 }
-/*�۸�����*/
+/*价格数字*/
 .price{
     font-size: 22px;
     position: absolute;
     top: -8px;
     left: 74px;
 }
-/*�����۸�div--Ĭ����ʾ*/
+/*促销价格div--默认显示*/
 #onsale_price{
     background: #F7F7F7;
     width: 400px;
@@ -246,7 +248,7 @@
     left: 8px;
     z-index: 2;
 }
-/*�Ż�ȯ*/
+/*优惠券*/
 #cheque span:first-child{
     margin-right: 15px;
 }
@@ -257,7 +259,7 @@
     background: url("../img/couponli.png");
     margin-left: 5px;
 }
-/*�Ż�ȯ--Ĭ������*/
+/*优惠券--默认隐藏*/
 #cheque{
     background: #F7F7F7;
     position: absolute;
@@ -266,7 +268,7 @@
     z-index: 1;
     padding-bottom: 40px;
 }
-/*������*/
+/*配送至*/
 #send_to select{
     padding: 5px 8px;
 }
@@ -276,7 +278,7 @@
 #send_to>span:last-child{
     padding-left: 15px;
 }
-/*����*/
+/*销量*/
 #sold{
     width: 726px;
     border-top: 1px dotted #C9C9C9;
@@ -294,7 +296,7 @@
     font-size: 12px;
 }
 #sold a:last-child{border-right: none;}
-/*��ζ����װ������*/
+/*口味、包装、数量*/
 #taste>div,#pack>div,#num>div{
     color: #ABACAB;
     font-size: 12px;
@@ -306,17 +308,11 @@
 #taste li,#pack li{
     float: left;
     border: 2px solid #EDEDED;
-    position: relative;
     margin: 5px;
     padding: 4px;
 }
-#taste li>span, #pack li>span{
-    position: absolute;
-    top: -2px;
-    left: -2px;
+#taste li.active,#pack li.active{
     border: 2px solid #B70305;
-    width: 100%;
-    height: 100%;
     background: url("../img/sys_item_selected.gif") no-repeat right bottom;
 }
 #num{
@@ -326,6 +322,7 @@
     display: inline-block;
 }
 #num>span:not(:last-child){
+    cursor: pointer;
     background: #E0E0E0;
     padding: 2px 8px;
     margin-top: 3px;
@@ -352,7 +349,7 @@
     background: #F03726;
     color: #fff;
 }
-/*�Ż��ײ�*/
+/*优惠套餐*/
 #cheap_set h3{
     font-size: 16px;
     padding: 20px 0 10px;
@@ -395,8 +392,8 @@
 .small_font{
     font-size: 12px;
 }
-/*��������*/
-/*�����������*/
+/*宝贝详情*/
+/*宝贝详情左侧*/
 #details{
     margin-top: 20px;
 }
@@ -432,16 +429,22 @@
 #details_left li:first-child>div{
     background: #F0F0F0;
 }
-/*���������Ҳ�*/
+/*宝贝详情右侧*/
 #details_right{
     float: left;
     width: 82%;
     box-sizing: border-box;
     padding-left: 30px;
 }
-/*����*/
+/*标题*/
 #details_title{
     background: #EDEDED;
+}
+#details_title.fixed{
+    position: fixed;
+    top: 0;
+    width: 954px;
+    z-index: 101;
 }
 #details_title a{
     font-weight: bold;
@@ -454,7 +457,7 @@
     opacity: .8;
 }
 #details_title a.active{
-    border-top: 2px solid #E4393C;
+    border-top-color: #E4393C;
     color: #E4393C;
 }
 #details_title li, #intro li, #comments>div:not(:nth-child(3)) li, #comments>div:nth-child(3) li>div{
@@ -462,16 +465,36 @@
 }
 #details_content{
     position: relative;
+    overflow: hidden;
+    background: #fff;
+    z-index: 100;
+}
+#intro.show,#comments.show,#prefer.show{
+    position: relative;
+    z-index: 100;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all linear .3s;
 }
 #intro,#comments,#prefer{
+    width: 954px;
+    top: 0;
+    box-sizing: border-box;
+}
+#intro.hide,#comments.hideL{
+    transform: translateX(-100%);
+}
+#comments.hideR,#prefer.hide{
+    transform: translateX(100%);
+}
+#intro.hide,#comments.hideL,#comments.hideR,#prefer.hide{
+    visibility: hidden;
     position: absolute;
     top: 0;
-    left: 0;
+    z-index: 99;
+    opacity: 0;
 }
-#comments,#prefer{
-    display: none;
-}
-/*��������*/
+/*宝贝详情*/
 #intro,#comments{
     padding: 0 10px;
 }
@@ -493,7 +516,7 @@
     width: 100%;
     vertical-align: bottom;
 }
-/*ȫ������*/
+/*全部评价*/
 #detail,#comments,#prefer{
     background: #fff;
 }
@@ -562,7 +585,7 @@
 #comments .com_body{
     padding: 15px;
 }
-/*������Ϣ*/
+/*警告信息*/
 .alert{
     background: #FFFFEE;
     text-align: center;
@@ -573,7 +596,7 @@
 .alert>p{
     font-size: 16px;
 }
-/*����ϲ��*/
+/*猜你喜欢*/
 #prefer{
     padding-top: 35px;
 }
