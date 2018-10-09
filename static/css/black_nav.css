@@ -1,0 +1,327 @@
+/*最右侧黑色导航*/
+.black_nav{
+    min-height: 100%;
+    /*box-sizing: border-box;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+/*黑色导航上方*/
+.black_nav .nav_top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #2B2B2B;
+}
+/*黑色导航下方*/
+.black_nav .nav_bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #2B2B2B;
+}
+.black_nav a{
+    display: block;
+}
+.black_nav a:hover{
+    background: #ED145B;
+}
+/*黑色导航：头像*/
+.avatar a{
+    padding: 10px 8px;
+    margin-top: 120px;
+}
+.avatar a span{
+    display: block;
+    width: 18px;
+    height: 19px;
+    background: url("../img/ibar_sprites.png") no-repeat;
+}
+.avatar a:hover span{
+    background-position: -33px 0;
+}
+.avatar:hover +.avatar_left{
+    visibility: visible;
+}
+/*黑色导航：求头像*/
+.avatar_left{
+    position: absolute;
+    top: 120px;
+    left: -273px;
+    box-shadow: 0 0 6px #ADADAD;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #fff;
+    padding: 10px;
+    width: 250px;
+    visibility: hidden;
+}
+.avatar_left p, .avatar_left a{
+    color: #404040;
+}
+.avatar_default img{
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+.avatar_default>div, .avatar_default+div{
+    float: left;
+}
+.avatar_default+div{
+    border-top: 1px dotted #E5E5E5;
+    font-size: 0;
+    padding: 15px 15px 20px 0;
+    margin-left: 25px;
+}
+.avatar_default+div a{
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid #E5E5E5;
+}
+.avatar_default+div a:hover{
+    background: #fff;
+}
+.avatar_default>div:nth-child(2){
+    padding: 27px 18px;
+}
+.avatar_default>div:nth-child(2)>p{
+    padding-top: 4px;
+}
+.avatar_left>span{
+    display: block;
+    border: 6px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 270px;
+}
+/*黑色导航：购物车*/
+.shop_card{
+    text-align: center;
+}
+.shop_card a{
+    color: #fff;
+    padding: 10px 0;
+    font-size: 12px;
+}
+.shop_card a span{
+    display: block;
+    font-size: 12px;
+}
+.shop_card a span:first-child{
+    background: url("../img/ibar_sprites.png") no-repeat 0 -29px;
+    width: 25px;
+    height: 20px;
+    margin-bottom: 8px;
+    margin-left: 6px;
+}
+.shop_card a:hover span:first-child{
+    background-position: -33px -29px;
+}
+.shop_card a span:last-child{
+    background: #ED145B;
+    padding: 3px;
+    border-radius: 50%;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    margin-left: 6px;
+}
+.shop_card a:hover span:last-child{
+    background: #fff;
+    color: #ED145B;
+}
+/*黑色导航：我的资产*/
+.wallet a{
+    padding: 12px 8px;
+}
+.wallet a:hover span{
+    background-position: -33px -57px;
+}
+.wallet a span{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url("../img/ibar_sprites.png") no-repeat 0 -57px;
+}
+.wallet:hover +.wallet_left{
+    visibility: visible;
+    left: -88px;
+}
+/*黑色导航：我的资产、我的足迹、我的收藏、我要充值、客服中心悬浮出现框共同样式*/
+.square_left{
+    position: absolute;
+    visibility: hidden;
+    transition: all linear .3s;
+}
+.square_left>div>a{
+    display: inline;
+    color: #D3D3D3;
+    font-size: 12px;
+    background: #2B2B2B;
+    padding: 10px 20px;
+}
+.square_left>span{
+    display: block;
+    border: 6px solid transparent;
+    border-left-color: rgba(43,43,43,.7);
+    position: absolute;
+}
+/*黑色导航：我的资产悬浮出现框*/
+.wallet_left{
+    top: 293px;
+    left: -120px;
+}
+.wallet_left>span{
+    top: 4px;
+    left: 88px;
+}
+/*黑色导航：我的足迹*/
+.trace a{
+    padding: 8px 11px;
+}
+.trace a:hover span{
+    background-position: -37px -110px;
+}
+.trace a span{
+    display: block;
+    width: 11px;
+    height: 24px;
+    background: url("../img/ibar_sprites.png") no-repeat -5px -110px;
+}
+.trace:hover +.trace_left{
+     visibility: visible;
+     left: -88px;
+ }
+/*黑色导航：我的足迹悬浮出现框*/
+.trace_left{
+    top: 335px;
+    left: -120px;
+}
+.trace_left>span{
+    top: 4px;
+    left: 88px;
+}
+/*黑色导航：我的收藏*/
+.store a{
+    padding: 11px 7px;
+}
+.store a span{
+    display: block;
+    width: 19px;
+    height: 18px;
+    background: url("../img/wdsc.png") no-repeat -8px -9px;
+}
+.store:hover +.store_left{
+     visibility: visible;
+     left: -88px;
+ }
+/*黑色导航：我的收藏悬浮出现框*/
+.store_left{
+    top: 375px;
+    left: -120px;
+}
+.store_left>span{
+    top: 4px;
+    left: 88px;
+}
+/*黑色导航：我要充值*/
+.recharge a{
+    padding: 11px 7px;
+    margin-bottom: 500px;
+}
+.recharge a span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/chongzhi.png") no-repeat -7px -7px;
+}
+.recharge:hover +.recharge_left{
+    visibility: visible;
+    left: -88px;
+}
+/*黑色导航：我要充值悬浮出现框*/
+.recharge_left{
+    top: 415px;
+    left: -120px;
+}
+.recharge_left>span{
+    top: 4px;
+    left: 88px;
+}
+/*黑色导航下方*/
+/*黑色导航：客服中心*/
+.server a{
+    padding: 11px 9px;
+}
+.server a:hover span{
+    background-position: -33px -175px;
+}
+.server a span{
+    display: block;
+    width: 15px;
+    height: 16px;
+    background: url("../img/ibar_sprites.png") no-repeat 0 -175px;
+}
+.server:hover +.server_left{
+    visibility: visible;
+    left: -88px;
+}
+/*黑色导航：客服中心悬浮出现框*/
+.server_left{
+    bottom: 88px;
+    left: -120px;
+}
+.server_left>span{
+    top: 4px;
+    left: 88px;
+}
+/*黑色导航：二维码*/
+.code a{
+    padding: 10px 7px;
+}
+.code a span{
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url("../img/ibar_sprites.png") no-repeat 0 -302px;
+}
+.code:hover +.big_code{
+    visibility: visible;
+}
+/*黑色导航：悬浮出现的大二维码图*/
+.big_code{
+    position: absolute;
+    bottom: 15px;
+    left: -154px;
+    box-shadow: 0 0 8px #666;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #fff;
+    visibility: hidden;
+}
+.big_code>div{
+    padding: 18px;
+}
+.big_code>div>img{
+    transform: scale(1.15);
+}
+.big_code>span{
+    display: block;
+    border: 6px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    bottom: 35px;
+    left: 146px;
+}
+/*黑色导航：toTop*/
+.toTop a{
+    padding: 11px 8px;
+}
+.toTop a span{
+    display: block;
+    width: 18px;
+    height: 16px;
+    background: url("../img/ibar_sprites.png") no-repeat 0 -200px;
+}

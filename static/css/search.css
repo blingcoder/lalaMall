@@ -41,7 +41,7 @@
     background: #F3EDC2;
     color: #FF0000;
 }
-/*主体*/
+/*涓讳綋*/
 #search_body{
     padding-bottom: 20px;
 }
@@ -49,12 +49,12 @@
     width: 100%;
     margin-top: 20px;
 }
-/*主体列表左侧*/
+/*涓讳綋鍒楄〃宸︿晶*/
 #left_pro{
     width: 80%;
     box-sizing: border-box;
 }
-/*主体列表左侧标题*/
+/*涓讳綋鍒楄〃宸︿晶鏍囬*/
 .title_style{
     padding: 0;
     margin: 8px 10px 10px;
@@ -73,13 +73,13 @@
 #left_pro,#left_pro li,#right_pro,#search_body .pagination{
     float: left;
 }
-/*主体列表左侧图片列表*/
+/*涓讳綋鍒楄〃宸︿晶鍥剧墖鍒楄〃*/
 #left_pro>div:nth-child(2) li{
     width: 25%;
     box-sizing: border-box;
     padding: 10px;
 }
-/*公用的单个商品div样式*/
+/*鍏敤鐨勫崟涓晢鍝乨iv鏍峰紡*/
 .pro{
     border: 1px solid #E8E8E8;
 }
@@ -108,7 +108,7 @@
 .pro .sold{
     text-align: right;
 }
-/*经典搭配*/
+/*缁忓吀鎼厤*/
 #right_pro{
     width: 20%;
     box-sizing: border-box;

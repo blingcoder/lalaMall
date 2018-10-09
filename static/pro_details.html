@@ -58,7 +58,7 @@
                         <div id="arrowL" class="disabled"></div>
                         <div>
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <img src="img/01_small.jpg"/>
                                 </li>
                                 <li>
@@ -81,7 +81,7 @@
                                 </li>
                                 <li>
                                     <img src="img/08_small.jpg"/>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <div id="arrowR"></div>
@@ -89,21 +89,21 @@
                 </div>
                 <!--右侧文字-->
                 <div id="top_right">
-                    <h3>良品铺子 手剥松子218g 坚果炒货 巴西松子</h3>
+                    <h3></h3>
                     <div>
                         <p>
-                            <span class="light_gray">店铺优惠</span>
+                            <!-- <span class="light_gray">店铺优惠</span>
                             <span class="light_red bold_font top_font space">购物满2件打8折，满3件7折</span>
-                            <span class="light_red bold_font top_font">点击领券</span>
+                            <span class="light_red bold_font top_font">点击领券</span> -->
                         </p>
                         <div id="onsale_price">
                             <p>
                                 <span class="light_gray">促销价</span>
-                                <span class="dark_red money">¥</span><span class="dark_red bold_font price">56.90</span>
+                                <span class="dark_red money">¥</span><span class="dark_red bold_font price"></span>
                             </p>
                             <p>
                                 <span class="light_gray">原价</span>
-                                <span class="line_through">¥98.00</span>
+                                <span class="line_through"></span>
                             </p>
                         </div>
                         <!--优惠券-->
@@ -133,28 +133,32 @@
                     </div>
                     <!--销量-->
                     <div id="sold">
-                        <a href="#">月销量<span class="dark_red">1015</span></a>
+                        <!-- <a href="#">月销量<span class="dark_red">1015</span></a>
                         <a href="#">累计销量<span class="dark_red">6015</span></a>
-                        <a href="#">累计评价<span class="dark_red">640</span></a>
+                        <a href="#">累计评价<span class="dark_red">640</span></a> -->
                     </div>
                     <!--口味-->
                     <div id="taste" class="clearfix">
                         <div>口味</div>
                         <ul>
-                            <li class="active">原味</li>
+                            <!-- <li class="active">原味</li>
                             <li>奶油</li>
                             <li>炭烧</li>
-                            <li>咸香</li>
+                            <li>咸香</li> -->
                         </ul>
                     </div>
                     <!--包装-->
                     <div id="pack" class="clearfix">
                         <div>包装</div>
                         <ul>
-                            <li class="active">手袋单人份</li>
+                            <!-- <li class="active">手袋单人份</li>
                             <li>礼盒双人份</li>
-                            <li>全家福礼包</li>
+                            <li>全家福礼包</li> -->
                         </ul>
+                    </div>
+                    <!-- 隐藏的div存储价格、口味、包装、库存信息 -->
+                    <div id="selected">
+                        <input type="hidden" data-sku="0" data-onsale-price="" data-origin-price="">
                     </div>
                     <!--数量-->
                     <div id="num" class="clearfix">
@@ -166,8 +170,8 @@
                     </div>
                     <!--立即购买-->
                     <div>
-                        <input class="btn btn_peach" type="button" value="立即购买"/>
-                        <input class="btn btn_red" type="button" value="加入购物车"/>
+                        <input class="btn btn_peach" type="button" value="立即购买" id="immeBuy"/>
+                        <input class="btn btn_red" type="button" value="加入购物车" id="addToCart"/>
                     </div>
                 </div>
             </div>
@@ -737,7 +741,7 @@
             </div>
         </div>
     </body>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/header.js"></script>
     <script src="js/pro_details.js"></script>

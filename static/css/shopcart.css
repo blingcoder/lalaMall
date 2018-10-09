@@ -1,4 +1,4 @@
-/*±êÌâ*/
+/*æ ‡é¢˜*/
 #cTitle{
     padding: 15px 0;
     border: 2px solid #F2F2F2;
@@ -13,7 +13,7 @@
     width: 25%;
     text-align: center;
 }
-/*ÒÑÏíÓÅ»İ*/
+/*å·²äº«ä¼˜æƒ */
 .discount{
     background: #E5E5E5;
     border-top: 1px solid #F2F2F2;
@@ -23,7 +23,7 @@
 .discount>p>span{
     color: #FA1F00;
 }
-/*ÉÌÆ·ÁĞ±í*/
+/*å•†å“åˆ—è¡¨*/
 .pros{
     border: 1px solid #F2F2F2;
 }
@@ -105,7 +105,7 @@
     width: 25px;
     overflow: hidden;
 }
-/*È«Ñ¡*/
+/*å…¨é€‰*/
 .sel_all{
     margin: 10px 0;
 }

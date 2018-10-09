@@ -6,10 +6,6 @@ $(function(){
         url:"header.html",
         type: "get",
         success: function(res){
-            //var header = $("#header");
-            //if(header[0].className == "container_small"){
-            //    res = res.replace(/container/,"container_small");
-            //}
             $(res).replaceAll($("#header"));
             //获取搜索按钮和输入框
             $btn = $("[type=button]");
@@ -17,6 +13,11 @@ $(function(){
             $btn.click(function(){
                 if($input.val().length>0){
                     location.href = "search.html";
+                }
+            })
+            $input.keyup(function(e){
+                if(e.keyCode==13){
+                    $btn.click();
                 }
             })
         }

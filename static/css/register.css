@@ -1,4 +1,4 @@
-/*¶¥²¿logoÍ¼Æ¬*/
+/*é¡¶éƒ¨logoå›¾ç‰‡*/
 .top{
     background: #F5F5F5;
 }
@@ -10,7 +10,7 @@
     width: 140px;
     vertical-align: middle;
 }
-/*ÖĞ¼ä·ÛÉ«±³¾°²¿·Ö*/
+/*ä¸­é—´ç²‰è‰²èƒŒæ™¯éƒ¨åˆ†*/
 .main{
     background: #FD7A72;
 }
@@ -20,7 +20,7 @@
 .main>div{
     position: relative;
 }
-/*ÓÒ²à±íµ¥*/
+/*å³ä¾§è¡¨å•*/
 .main>div>div{
     position: absolute;
     top: 20px;
@@ -43,7 +43,7 @@
     font-weight: bold;
     cursor: pointer;
 }
-/*Ïà¶ÔÓÚ.main>div>divµÄ¶¨Î»*/
+/*ç›¸å¯¹äº.main>div>divçš„å®šä½*/
 .form_body{
     width: 370px;
     height: 354px;
@@ -59,12 +59,12 @@
     visibility: hidden;
     /*left: 370px;*/
 }
-/*.form_bodyµã»÷ºóµÄÑùÊ½*/
+/*.form_bodyç‚¹å‡»åçš„æ ·å¼*/
 .fb_clicked{
     left: 0;
 
 }
-/*¸´Ñ¡¿òËùÔÚĞĞµÄÑùÊ½*/
+/*å¤é€‰æ¡†æ‰€åœ¨è¡Œçš„æ ·å¼*/
 .form_body .checkB{
     margin-top: 20px;
     margin-bottom: 20px;
