@@ -79,16 +79,15 @@ router.get("/",(req,res)=>{
 //付款界面
 router.get("/pay",(req,res)=>{
     var sku = req.query.sku;
-    var num = req.query.num;
     var reg = /^\d{6}$/;
-    // if(!reg.test(sku)){
-    //     res.send({code:-1,msg:"商品sku号必须是六位的数字！"});
-    //     return;
-    // }
-    var sql = "SELECT `id`, `pro_id`, `family_id`, `title`, `onsale_price`, `taste`, `package` FROM `la_product` WHERE sku=?";
+    if(!reg.test(sku)){
+        res.send({code:-1,msg:"商品sku号必须是六位的数字！"});
+        return;
+    }
+    var sql = "SELECT `id`, `pro_id`, `family_id`, `sku`, `title`, `onsale_price`, `taste`, `package` FROM `la_product` WHERE sku=?";
     pool.query(sql,[sku],(err,result)=>{
         if(err) throw err;
-        if(result.lenght>0){
+        if(result.length>0){
             res.send({code:1,msg:result});
         }
     })

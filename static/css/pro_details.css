@@ -312,6 +312,7 @@
     border: 2px solid #EDEDED;
     margin: 5px;
     padding: 4px;
+    cursor: pointer;
 }
 #taste li.active,#pack li.active{
     border: 2px solid #B70305;
@@ -341,6 +342,7 @@
     padding: 5px 0;
     width: 98px;
     border: 1px solid #F03726;
+    cursor: pointer;
 }
 .btn_peach{
     background: #FFE8E8;

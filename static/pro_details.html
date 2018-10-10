@@ -158,7 +158,7 @@
                     </div>
                     <!-- 隐藏的div存储价格、口味、包装、库存信息 -->
                     <div id="selected">
-                        <input type="hidden" data-sku="0" data-onsale-price="" data-origin-price="">
+                        <input type="hidden" data-sku="" data-onsale-price="" data-origin-price="">
                     </div>
                     <!--数量-->
                     <div id="num" class="clearfix">
@@ -669,81 +669,12 @@
             </div>
         </div>
         <!--最右侧黑色导航-->
-        <div class="black_nav">
-            <div class="nav_top">
-                <!--头像-->
-                <div class="avatar"><a href="#"><span></span></a></div>
-                <!--求头像-->
-                <div class="avatar_left">
-                    <div>
-                        <div class="avatar_default clearfix">
-                            <div><img src="img/no-img_mid_.jpg"/></div>
-                            <div>
-                                <p>用户名 : sl1903</p>
-                                <p>级别 : 普通会员</p>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="#">我的订单</a>
-                            <a href="#">我的收藏</a>
-                        </div>
-                    </div>
-                    <span></span>
-                </div>
-                <!--购物车-->
-                <div class="shop_card"><a href="#"><span></span>购<span>物</span>车<span>0</span></a></div>
-                <!--我的资产-->
-                <div class="wallet"><a href="#"><span></span></a></div>
-                <!--我的资产悬浮出现框-->
-                <div class="square_left wallet_left">
-                    <div><a href="#">我的资产</a></div>
-                    <span></span>
-                </div>
-                <!--我的足迹-->
-                <div class="trace"><a href="#"><span></span></a></div>
-                <!--我的足迹悬浮出现框-->
-                <div class="square_left trace_left">
-                    <div><a href="#">我的足迹</a></div>
-                    <span></span>
-                </div>
-                <!--我的收藏-->
-                <div class="store"><a href="#"><span></span></a></div>
-                <!--我的收藏悬浮出现框-->
-                <div class="square_left store_left">
-                    <div><a href="#">我的收藏</a></div>
-                    <span></span>
-                </div>
-                <!--我要充值-->
-                <div class="recharge"><a href="#"><span></span></a></div>
-                <!--我要充值悬浮出现框-->
-                <div class="square_left recharge_left">
-                    <div><a href="#">我要充值</a></div>
-                    <span></span>
-                </div>
-            </div>
-            <div class="nav_bottom">
-                <!--客服中心-->
-                <div class="server"><a href="#"><span></span></a></div>
-                <!--客服中心悬浮出现框-->
-                <div class="square_left server_left">
-                    <div><a href="#">客服中心</a></div>
-                    <span></span>
-                </div>
-                <!--二维码-->
-                <div class="code"><a href="#"><span></span></a></div>
-                <!--大二维码-->
-                <div class="big_code">
-                    <div><img src="img/weixin_code_145.png"/></div>
-                    <span></span>
-                </div>
-                <!--回到顶部-->
-                <div class="toTop"><a href="#"><span></span></a></div>
-            </div>
-        </div>
+        <div class="black_nav" id="black_nav"></div>
     </body>
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/header.js"></script>
     <script src="js/pro_details.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/black_nav.js"></script>
 </html>

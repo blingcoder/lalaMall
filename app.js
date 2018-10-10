@@ -3,6 +3,7 @@ const express = require('express');
 const user = require('./routes/user.js');
 const index = require('./routes/index.js');
 const details = require('./routes/details.js');
+const pay = require('./routes/pay.js');
 const bodyParser = require('body-parser');
 //1. 使用express构建服务器
 var app = express();
@@ -21,3 +22,4 @@ app.use('/user',user);
 //将首页路由器挂载到index下 /index
 app.use('/index',index);
 app.use('/details',details);
+app.use('/pay',pay);

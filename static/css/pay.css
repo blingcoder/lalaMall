@@ -48,15 +48,9 @@
     box-sizing: border-box;
     padding: 5px 10px;
     margin-right: 20px;
-    /* position: relative; */
 }
 .way li.active{
-    /* position: absolute;
-    top: -1px;
-    left: -1px; */
     border: 1px solid #B70305;
-    /* width: 100%;
-    height: 100%; */
     background: url("../img/sys_item_selected.gif") no-repeat right bottom;
 }
 .way a{
@@ -91,6 +85,10 @@
     line-height: 36px;
     padding-left: 54px;
 }
+#pay li.active{
+    border: 1px solid #B70305;
+    background: url("../img/sys_item_selected.gif") no-repeat right bottom;
+}
 #pay a.pay1{
     background: url("../img/wangyin.jpg") no-repeat;
     background-size: contain;
@@ -118,17 +116,11 @@
 #order_info li:first-child{
     width: 50%;
 }
-#order_info li:nth-child(2){
+#order_info li:nth-child(2),#order_info li:nth-child(4),#order_info li:nth-child(5){
     width: 10%;
 }
 #order_info li:nth-child(3){
     width: 20%;
-}
-#order_info li:nth-child(4){
-    width: 10%;
-}
-#order_info li:nth-child(5){
-    width: 10%;
 }
 #order_info .info_body+div{
     border-top: 1px solid #E5E5E5;
@@ -141,6 +133,7 @@
 .info_item{
     text-align: left !important;
     padding-left: 10px !important;
+    box-sizing: border-box;
 }
 .info_item img, .info_item>div{
     float: left;
@@ -165,6 +158,7 @@
     border: none;
     line-height: 1;
     padding: 8px;
+    cursor: pointer;
 }
 .info_num input{
     width: 25px;
@@ -191,6 +185,9 @@
     padding: 2px 8px;
     border: 1px solid #E5E5E5;
     width: 450px;
+}
+#buyer_notes input,#buyer_notes select,.info_num button{
+    outline: none;
 }
 /*合计及以下*/
 #total{

@@ -196,25 +196,20 @@ $(function(){
     var numb = $("#num"),
         minu = numb.children("span:eq(0)"),
         selNum = numb.children("input"),
-        val = selNum.val(),
         add = numb.children("span:eq(1)");
-        //store = numb.children("span:last").children();
-        //leftC = parseInt(store.html());
         minu.click(function(){
-            if(selNum.val()<=1){
+            var val = selNum.val();
+            if(val<=1){
                 return;
             }else{
                 val--;
-                selNum.val(val);
-                //leftC++;
-                //store.html(leftC);
+                selNum.attr("value",val);
             }
         })
         add.click(function(){
+            var val = selNum.val();
             val++;
-            selNum.val(val);
-            //leftC--;
-            //store.html(leftC);
+            selNum.attr("value",val);
         })
 
     var details_title = $("#details_title");
@@ -265,8 +260,19 @@ $(function(){
         }
     })
 
-    // 给立即购买绑定事件
-    $("#immeBut").click(function(){
-        $.ajax({})
+    // 给立即购买按钮绑定页面跳转事件并传参
+    $("#immeBuy").click(function(){
+        var data = $("input[type=hidden]").attr("data-sku");
+        var num = $("#num>input").val();
+        $.ajax({
+            url:"http://127.0.0.1:8080/details/pay",
+            type:"get",
+            data:`sku=${data}`,
+            success:function(result){
+                if(result.code==1){
+                    location.href=`pay.html?sku=${result.msg[0].sku}&num=${num}`;
+                }
+            }
+        })
     })
 })
