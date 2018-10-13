@@ -15,6 +15,7 @@ $(function(){
             url:"http://127.0.0.1:8080/pay",
             type:"get",
             data:`sku=${params.sku}`,
+            async:false,
             success:function(result){
                 if(result.code==1){
                     $(".info_body div>a").html(result.msg[0].title);
@@ -22,19 +23,28 @@ $(function(){
                     $(".info_body div>p>span:last-child").html(result.msg[0].package);
                     price_container.html(`¥${result.msg[0].onsale_price.toFixed(2)}`);
                     getSum();
+                    getTotal();
                 }
             }
-        })
+        });
+        //给选择地址绑定点击事件
+        $("#addr").click = function(e){
+            var $this = $(e.target);
+            if($this.is("div")){
+                $this.siblings().removeClass("active");
+                $this.addClass("active");
+            }
+        };?????
         //金额随着数量的变化动态改变
         function getSum(){
             var price = parseFloat(price_container.html().slice(1));
             var num = $(".info_num>input").val();
             $(".info_num").next().html(`¥${(price*num).toFixed(2)}`);
-        }
-        //为购买数量左右两边的按钮绑定点击事件
+        };
+        //给购买数量左右两边的按钮绑定点击事件
         var minu = $(".info_num>button:first-child");
         var add = $(".info_num>button:last-child");
-        var sum = $(".info_num").next();
+        // var sum = $(".info_num").next();
         minu.click(function(){
             var val = selNum.val();
             if(val<=1){
@@ -44,14 +54,56 @@ $(function(){
                 selNum.attr("value",val);
                 //金额随着数量的变化动态改变
                 getSum();
+                getTotal();
             }
-        })
+        });
         add.click(function(){
             var val = selNum.val();
             val++;
             selNum.attr("value",val);
             //金额随着数量的变化动态改变
             getSum();
+            getTotal();
+        });
+        //定义点击添加红色边框方法
+        function addClass(e){
+            var $btn = $(e.target);
+            if($btn.is("a")){
+                $btn.parent().siblings().removeClass("active");
+                $btn.parent().addClass("active");
+            }
+        };
+        //给选择物流方式绑定点击事件
+        $("#delivery>div").click(function(e){
+            addClass(e);
+        });
+        //给选择支付方式绑定点击事件
+        $("#pay>div").click(function(e){
+            addClass(e);
+        });
+        //计算总金额
+        function getTotal(){
+            //金额
+            var sum = parseFloat($(".info_num+li").html().slice(1));
+            //快递
+            var delivery = parseFloat($(".info_body>ul>li:last-child").html().slice(2));
+            //优惠券
+            var discount = parseFloat($("#discount").val().slice(1));
+            //红包
+            var redBag = parseFloat($("#red_bag").val().slice(1));
+            //合计
+            var total = sum - delivery - discount - redBag;
+            $("#total>p>.red_font").html(total.toFixed(2));
+            $("#total>div>p>span.red_font").html(total.toFixed(2));
+        };
+        //给提交订单按钮绑定点击事件
+        $("#total>button").click(function(){
+            //确认总金额数字的格式正确(*.**~******.**)
+            var reg = /^[0-9]{1,6}\.[0-9]{2}/;
+            var shouldPay = $("#total>p>.red_font").html();
+            if(reg.test(shouldPay)){
+                location.href = "success.html?shouldpay="+shouldPay;
+            }
         })
     }
 })
