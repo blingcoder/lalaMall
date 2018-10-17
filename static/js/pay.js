@@ -11,6 +11,7 @@ $(function(){
         var num = params.num;
         var price_container = $(".info_price");
         selNum.attr("value",num);
+        getAddr();  
         $.ajax({
             url:"http://127.0.0.1:8080/pay",
             type:"get",
@@ -28,13 +29,26 @@ $(function(){
             }
         });
         //给选择地址绑定点击事件
-        $("#addr").click = function(e){
-            var $this = $(e.target);
-            if($this.is("div")){
-                $this.siblings().removeClass("active");
-                $this.addClass("active");
-            }
-        };?????
+        var addr = $("#addr>div");
+        for(var i=0;i<addr.length;i++){
+            $(addr[i]).click(function(){
+                $(this).siblings().removeClass("active");
+                $(this).addClass("active");
+                //将选择的收货地址放入确认订单信息中
+                getAddr();
+            });
+        };
+        //将选择的收货地址放入确认订单信息中
+        function getAddr(){
+            var name = $("#addr>div.active>p.font_bold").html().split("<")[0];
+            var phone = $("#addr>div.active>p.font_bold>span.small_font").html();
+            var address = $("#addr>div.active>p.font_bold+p").html().split("：")[1];
+            var targetD = $("#total>div");
+            targetD.find("p:nth-child(2)>span.font_bold+span").html(address);
+            targetD.find("p:nth-child(3)>span.font_bold+span").html(name);
+            targetD.find("p:nth-child(3)>span.font_bold+span+span").html(phone);
+        }
+        // console.log(name,phone,address);
         //金额随着数量的变化动态改变
         function getSum(){
             var price = parseFloat(price_container.html().slice(1));
@@ -68,10 +82,13 @@ $(function(){
         //定义点击添加红色边框方法
         function addClass(e){
             var $btn = $(e.target);
-            if($btn.is("a")){
+            if($btn.is("li")){
+                $btn.siblings().removeClass("active");
+                $btn.addClass("active");
+            }else if($btn.is("a")){
                 $btn.parent().siblings().removeClass("active");
                 $btn.parent().addClass("active");
-            }
+            };
         };
         //给选择物流方式绑定点击事件
         $("#delivery>div").click(function(e){
@@ -81,6 +98,9 @@ $(function(){
         $("#pay>div").click(function(e){
             addClass(e);
         });
+        $("#discount").change(function(){
+            getTotal();
+        })
         //计算总金额
         function getTotal(){
             //金额
@@ -92,7 +112,7 @@ $(function(){
             //红包
             var redBag = parseFloat($("#red_bag").val().slice(1));
             //合计
-            var total = sum - delivery - discount - redBag;
+            var total = sum + delivery - discount - redBag;
             $("#total>p>.red_font").html(total.toFixed(2));
             $("#total>div>p>span.red_font").html(total.toFixed(2));
         };

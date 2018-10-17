@@ -23,7 +23,7 @@
 }
 #related_sort>div h3{
     color: #666;
-    width: 5%;
+    width: 6%;
     text-align: center;
     margin-top: 2px;
 }
@@ -89,14 +89,14 @@
 .pro img{
     width: 100%;
 }
-.pro img+p {
+.pro>a:nth-child(2)>p {
     padding: 0 10px;
 }
-.pro img+p+p{
+.pro>a:nth-child(2)+p{
     padding: 8px 4px;
     font-size: 0;
 }
-.pro img+p+p span{
+.pro>a:nth-child(2)+p span{
     display: inline-block;
     width: 50%;
 }

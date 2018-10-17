@@ -11,8 +11,10 @@ $(function(){
             $btn = $("[type=button]");
             $input = $("[type=text]");
             $btn.click(function(){
-                if($input.val().length>0){
-                    location.href = "search.html";
+                var reg = /^\s+/;
+                var kw = $input.val();
+                if(kw.length>0 && !reg.test(kw)){
+                    location.href = `products.html?kw=${kw}`;
                 }
             })
             $input.keyup(function(e){

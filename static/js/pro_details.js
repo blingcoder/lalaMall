@@ -1,19 +1,19 @@
 $(function(){
-    if(location.search.indexOf("id=")!=-1){
-        var id = location.search.split("=")[1];
+    if(location.search.indexOf("sku=")!=-1){
+        // var url = location.href.split("=")[0];
+        var sku = location.search.split("=")[1];
         // 动态获取大中小图
         $.ajax({
             url:"http://127.0.0.1:8080/details",
             type:"get",
-            data:`id=${id}`,
+            data:`sku=${sku}`,
             dataType:"json",
             async:false,
             success:function(res){
-                //console.log(res);
+                // console.log(res);
                 if(res.code==1){
-                    var {product,tastes,packages,pics,skuInfo} = res.msg;
-                    // console.log(tastes);
-                    var {title,discount_msg,month_sold,total_sold,total_comments} = product;
+                    var {product,tastes,packages,pics,specs,skuInfo} = res.msg;
+                    var {title,discount_msg,month_sold,total_sold,total_comments,taste,package,onsale_price,origin_price} = product;
                     $("#top_right>h3").html(title);
                     // 店铺优惠
                     var html = `<span class="light_gray">店铺优惠</span>
@@ -28,51 +28,48 @@ $(function(){
                     // 口味
                     var html = ``;
                     for(var t of tastes){
-                        html += `<li>${t.taste}</li>`;
+                        html += `<li class="${taste==t.taste?'active':''}">${t.taste}</li>`;
                     }
                     $("#taste>ul").html(html);
                     // 包装
                     var html = ``;
                     for(var p of packages){
-                        html += `<li>${p.package}</li>`;
+                        html += `<li class="${package==p.package?'active':''}">${p.package}</li>`;
                     }
                     $("#pack>ul").html(html);
-                    // 把最小和最大的价格放入到html中
-                    var onp_arr = [],
-                        orp_arr = [],
-                        newP_container = $("#onsale_price>p:first-child>span:last-child"),
+                    //获取口味和包装信息保存到隐藏的input中
+                    var input_hidden = $("#selected>input");
+                    input_hidden.attr("data-sku",`${sku}`);
+                    var newP_container = $("#onsale_price>p:first-child>span:last-child"),
                         oldP_container = $("#onsale_price>p:last-child>span:last-child");
-                    for(var s of skuInfo){
-                        var {onsale_price,origin_price} = s;
-                        onp_arr.push(onsale_price);
-                        orp_arr.push(origin_price);
-                    }
-                    maxNp = Math.max.apply(null,onp_arr).toFixed(2);
-                    minNp = Math.min.apply(null,onp_arr).toFixed(2);
-                    maxOp = Math.max.apply(null,orp_arr).toFixed(2);
-                    minOp = Math.min.apply(null,orp_arr).toFixed(2);
-                    newP_container.html(`${minNp}-${maxNp}`);
-                    oldP_container.html(`¥${minOp}-${maxOp}`);
+                    //促销价和原价
+                    $("#onsale_price>p:first-child>span:last-child").html(onsale_price.toFixed(2));
+                    $("#onsale_price>p:last-child>span:last-child").html("¥"+origin_price.toFixed(2));
                     // 口味、包装点击后判断是否都已选
                     var taste = $("#taste"),
-                        pack = $("#pack"),
-                        input_hidden = $("#selected>input");
+                        pack = $("#pack");
                     // 把所选的商品规格的sku信息保存到input标签中
                     function getActive(){
                         var taste_active = $("#taste>ul>li[class=active]");
                         var pack_active = $("#pack>ul>li[class=active]");
                         if(taste_active && pack_active){
-                            for(var s of skuInfo){
-                                var sku,new_price,old_price;
-                                if(s.taste==taste_active.html() && s.package==pack_active.html()){
+                            var taste = taste_active.html();
+                            var pack = pack_active.html();
+                            // alert(taste,pack);
+                            var new_price = 0,
+                                old_price = 0;
+                            for(var s of specs){
+                                if(taste == s.taste && pack == s.package){
                                     sku = s.sku;
                                     new_price = s.onsale_price;
                                     old_price = s.origin_price;
+                                    // location.href = url + "=" + sku;
                                     input_hidden.attr({
                                         "data-sku":`${sku}`,
                                         "data-onsale-price":`${new_price}`,
                                         "data-origin-price":`${old_price}`
                                     });
+                                    break;
                                 }
                             }
                         }
@@ -128,7 +125,7 @@ $(function(){
         if($sel.is("li")){
             $sel.siblings().removeClass("active");
             $sel.addClass("active");
-        }
+        };
     }
     // 放大镜效果
     var mask = $("#mask"),
@@ -269,6 +266,7 @@ $(function(){
             type:"get",
             data:`sku=${data}`,
             success:function(result){
+                // console.log(result);
                 if(result.code==1){
                     location.href=`pay.html?sku=${result.msg[0].sku}&num=${num}`;
                 }

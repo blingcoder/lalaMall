@@ -73,5 +73,11 @@ a{
     background: #0E90D2;
     border-color: transparent;
 }
+.pagination a.disabled{
+    /* color: #fff; */
+    background: #eee;
+    border-color: transparent;
+    cursor: text;
+}
 
 
